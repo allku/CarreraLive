@@ -18,6 +18,8 @@ export class PilotosComponent implements OnInit {
   pilotoList: Piloto[]
   resultadoList: Resultado[]
   displayedColumns: string[] = ['numero', 'categoria', 'nombre', 'apellido', 'control', 'tiempo'];
+
+  displayedColumnsResult: string[] = ['numero', 'categoria', 'nombre', 'apellido', 'partida', 'punto1', 'punto2', 'punto3'];
   // ELEMENT_DATA: Piloto[] = [
   //   {$id: '1', numero: 'Juan', categoria: 'A', nombre: 'H', apellido: 'Ha', control: 's'}
   // ];

@@ -11,6 +11,7 @@ import { AngularFireModule } from "angularfire2";
 import { environment } from "../environments/environment";
 
 import { PilotosComponent } from "./components/pilotos/pilotos.component";
+import { ResultadosComponent } from "./components/resultados/resultados.component";
 
 import { PilotoService } from "./services/piloto.service";
 import { ResultadoService } from "./services/resultado.service";
@@ -18,7 +19,8 @@ import { ResultadoService } from "./services/resultado.service";
 @NgModule({
   declarations: [
     AppComponent,
-    PilotosComponent
+    PilotosComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
