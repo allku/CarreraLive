@@ -5,8 +5,8 @@ export class Resultado {
   nombre: string;
   apellido: string;
   partida: Date;
-  punto1: Date;
-  punto2: Date;
+  punto1: string;
+  punto2: string;
   punto3: Date;
   resultado: string;
   ranking: number;

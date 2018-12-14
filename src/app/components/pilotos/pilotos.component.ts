@@ -46,7 +46,7 @@ export class PilotosComponent implements OnInit {
           this.pilotoList.push(p as Piloto)
           this.dataSourcePilotos = new MatTableDataSource(this.pilotoList)
         })
-      })        
+      })               
 
     this.resultadoService.getResultados()
     .snapshotChanges()
@@ -61,10 +61,15 @@ export class PilotosComponent implements OnInit {
         this.dataSourceResultados.sort = this.sort
       })
     })
+    
   }
 
   applyFilter(filterValue: string) {
     this.dataSourcePilotos.filter = filterValue.trim().toLowerCase();
+  }
+
+  applyFilterResultados(filterValue: string) {
+    this.dataSourceResultados.filter = filterValue.trim().toLowerCase();
   }
 
 }
