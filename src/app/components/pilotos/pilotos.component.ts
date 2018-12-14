@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort, MatTableDataSource } from '@angular/material';
 
 import { PilotoService } from "../../services/piloto.service";
 import { ResultadoService } from '../../services/resultado.service';
@@ -19,7 +19,7 @@ export class PilotosComponent implements OnInit {
   resultadoList: Resultado[]
   displayedColumns: string[] = ['numero', 'categoria', 'nombre', 'apellido', 'control', 'tiempo'];
 
-  displayedColumnsResult: string[] = ['numero', 'categoria', 'nombre', 'apellido', 'partida', 'punto1', 'punto2', 'punto3'];
+  displayedColumnsResult: string[] = ['numero', 'categoria', 'nombre', 'apellido', 'partida', 'punto1', 'punto2', 'punto3', 'resultado', 'ranking'];
   // ELEMENT_DATA: Piloto[] = [
   //   {$id: '1', numero: 'Juan', categoria: 'A', nombre: 'H', apellido: 'Ha', control: 's'}
   // ];
@@ -32,7 +32,9 @@ export class PilotosComponent implements OnInit {
     private resultadoService: ResultadoService 
     ) { }
 
-  ngOnInit() {
+  @ViewChild(MatSort) sort: MatSort;
+  ngOnInit() {    
+
     this.pilotoService.getPilotos()
       .snapshotChanges()
       .subscribe(item => {
@@ -44,8 +46,8 @@ export class PilotosComponent implements OnInit {
           this.pilotoList.push(p as Piloto)
           this.dataSourcePilotos = new MatTableDataSource(this.pilotoList)
         })
-      })
-    
+      })        
+
     this.resultadoService.getResultados()
     .snapshotChanges()
     .subscribe(item => {
@@ -54,8 +56,9 @@ export class PilotosComponent implements OnInit {
         let r = element.payload.toJSON()
         // console.log(r)
         r["$id"] = element.key
-        this.resultadoList.push(r as Resultado)
+        this.resultadoList.push(r as Resultado)        
         this.dataSourceResultados = new MatTableDataSource(this.resultadoList)
+        this.dataSourceResultados.sort = this.sort
       })
     })
   }

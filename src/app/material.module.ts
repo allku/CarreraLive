@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material';
+import { MatSortModule } from '@angular/material';
 
 const modules = [
   MatToolbarModule,
@@ -12,7 +13,8 @@ const modules = [
   MatTabsModule,
   MatCardModule,
   MatInputModule, 
-  MatTableModule
+  MatTableModule,
+  MatSortModule
 ]
 
 @NgModule({

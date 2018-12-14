@@ -8,4 +8,6 @@ export class Resultado {
   punto1: Date;
   punto2: Date;
   punto3: Date;
+  resultado: string;
+  ranking: number;
 }
