@@ -397,6 +397,8 @@ THE SOFTWARE.
 @angular/animations
 MIT
 
+@angular/material/sort
+
 @angular/material/tabs
 
 @angular/material/card
