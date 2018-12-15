@@ -40,7 +40,7 @@
           Formato con Fecha y Hora
            <td mat-cell *matCellDef="let element"> {{ element.tiempo.time | date: 'yyyy-MM-dd h:mm:ss a'}}</td>
         -->
-        <td mat-cell *matCellDef="let element"> {{ element.tiempo.time | date: 'h:mm:ss'}}</td>
+        <td mat-cell *matCellDef="let element"> {{ element.tiempo.time | date: 'HH:mm:ss'}}</td>
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -71,42 +71,42 @@
             <!-- Name Column -->
             <ng-container matColumnDef="nombre">
               <th mat-header-cell *matHeaderCellDef> Nombre </th>
-              <td mat-cell *matCellDef="let element"> {{element.nombre}} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}}</td>
             </ng-container>
                   
             <ng-container matColumnDef="apellido">
               <th mat-header-cell *matHeaderCellDef> Apellido </th>
-              <td mat-cell *matCellDef="let element"> {{element.apellido}} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> {{element.apellido}}</td>
             </ng-container>
       
             <ng-container matColumnDef="partida">
               <th mat-header-cell *matHeaderCellDef> Partida </th>
-              <td mat-cell *matCellDef="let element"> {{ element.partida.time | date: 'h:mm'}} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.partida.time | date: 'HH:mm'}}-</td>
             </ng-container>
       
             <ng-container matColumnDef="punto1">
               <th mat-header-cell *matHeaderCellDef> Punto1 </th>
-              <td mat-cell *matCellDef="let element"> {{ element.punto1 }} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.punto1 }}-</td>
             </ng-container>
 
             <ng-container matColumnDef="punto2">
               <th mat-header-cell *matHeaderCellDef> Punto2 </th>
-              <td mat-cell *matCellDef="let element"> {{ element.punto2 }} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.punto2 }}-</td>
             </ng-container>
 
             <ng-container matColumnDef="punto3">
               <th mat-header-cell *matHeaderCellDef> Punto3 </th>
-              <td mat-cell *matCellDef="let element"> {{ element.punto3.time | date: 'h:mm:ss' }} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.punto3.time | date: 'HH:mm:ss' }}-</td>
             </ng-container>
 
             <ng-container matColumnDef="resultado">
               <th mat-header-cell *matHeaderCellDef> Resultado </th>
-              <td mat-cell *matCellDef="let element"> {{ element.resultado }} &nbsp;</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.resultado }}-</td>
             </ng-container>
           
             <ng-container matColumnDef="ranking">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Ranking </th>
-              <td mat-cell *matCellDef="let element"> {{ element.ranking }}</td>
+              <td mat-cell *matCellDef="let element"> -{{ element.ranking }}</td>
             </ng-container>
             
             <tr mat-header-row *matHeaderRowDef="displayedColumnsResult"></tr>
