@@ -1,0 +1,14 @@
+.example-card {
+  max-width: 220px;
+}
+
+p {text-align:center;}
+
+.example-header-image {
+  background-size: cover;
+}
+
+#content {
+  width: 400px;
+  margin: 0 auto;
+}

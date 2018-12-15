@@ -12,6 +12,8 @@ import { environment } from "../environments/environment";
 
 import { PilotosComponent } from "./components/pilotos/pilotos.component";
 import { ResultadosComponent } from "./components/resultados/resultados.component";
+import { PerdidosComponent } from "./components/perdidos/perdidos.component";
+import { AuspiciantesComponent } from "./components/auspiciantes/auspiciantes.component";
 
 import { PilotoService } from "./services/piloto.service";
 import { ResultadoService } from "./services/resultado.service";
@@ -20,7 +22,9 @@ import { ResultadoService } from "./services/resultado.service";
   declarations: [
     AppComponent,
     PilotosComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    PerdidosComponent,
+    AuspiciantesComponent
   ],
   imports: [
     BrowserModule,

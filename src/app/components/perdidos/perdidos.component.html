@@ -1,0 +1,12 @@
+<div id="content">  
+  <br>
+  <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="open()">Buscar</button>    
+
+      <ul id="channels-list">
+          <li *ngFor="let perdido of missing">
+            {{ perdido }}
+          </li>
+        </ul>
+  </div>
+</div>
